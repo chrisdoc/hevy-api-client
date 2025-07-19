@@ -1,0 +1,12 @@
+# Node.js
+node_modules/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS and Editor specific
+.DS_Store
+.vscode/
+.idea/
