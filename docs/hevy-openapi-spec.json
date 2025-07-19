@@ -9,9 +9,7 @@
     "/v1/workouts": {
       "get": {
         "summary": "Get a paginated list of workouts",
-        "tags": [
-          "Workouts"
-        ],
+        "tags": ["Workouts"],
         "parameters": [
           {
             "in": "header",
@@ -77,9 +75,7 @@
       },
       "post": {
         "summary": "Create a new workout",
-        "tags": [
-          "Workouts"
-        ],
+        "tags": ["Workouts"],
         "parameters": [
           {
             "in": "header",
@@ -134,9 +130,7 @@
     "/v1/workouts/count": {
       "get": {
         "summary": "Get the total number of workouts on the account",
-        "tags": [
-          "Workouts"
-        ],
+        "tags": ["Workouts"],
         "parameters": [
           {
             "in": "header",
@@ -172,9 +166,7 @@
     "/v1/workouts/events": {
       "get": {
         "summary": "Retrieve a paged list of workout events (updates or deletes) since a given date. Events are ordered from newest to oldest. The intention is to allow clients to keep their local cache of workouts up to date without having to fetch the entire list of workouts.",
-        "tags": [
-          "Workouts"
-        ],
+        "tags": ["Workouts"],
         "parameters": [
           {
             "in": "header",
@@ -232,9 +224,7 @@
     },
     "/v1/workouts/{workoutId}": {
       "get": {
-        "tags": [
-          "Workouts"
-        ],
+        "tags": ["Workouts"],
         "summary": "Get a single workout’s complete details by the workoutId",
         "parameters": [
           {
@@ -271,9 +261,7 @@
       },
       "put": {
         "summary": "Update an existing workout",
-        "tags": [
-          "Workouts"
-        ],
+        "tags": ["Workouts"],
         "parameters": [
           {
             "in": "header",
@@ -334,9 +322,7 @@
     "/v1/routines": {
       "get": {
         "summary": "Get a paginated list of routines",
-        "tags": [
-          "Routines"
-        ],
+        "tags": ["Routines"],
         "parameters": [
           {
             "in": "header",
@@ -402,9 +388,7 @@
       },
       "post": {
         "summary": "Create a new routine",
-        "tags": [
-          "Routines"
-        ],
+        "tags": ["Routines"],
         "parameters": [
           {
             "in": "header",
@@ -475,9 +459,7 @@
     "/v1/routines/{routineId}": {
       "get": {
         "summary": "Get a routine by its Id",
-        "tags": [
-          "Routines"
-        ],
+        "tags": ["Routines"],
         "parameters": [
           {
             "in": "header",
@@ -531,9 +513,7 @@
       },
       "put": {
         "summary": "Update an existing routine",
-        "tags": [
-          "Routines"
-        ],
+        "tags": ["Routines"],
         "parameters": [
           {
             "in": "header",
@@ -610,9 +590,7 @@
     "/v1/exercise_templates": {
       "get": {
         "summary": "Get a paginated list of exercise templates available on the account.",
-        "tags": [
-          "ExerciseTemplates"
-        ],
+        "tags": ["ExerciseTemplates"],
         "parameters": [
           {
             "in": "header",
@@ -679,9 +657,7 @@
     },
     "/v1/exercise_templates/{exerciseTemplateId}": {
       "get": {
-        "tags": [
-          "ExerciseTemplates"
-        ],
+        "tags": ["ExerciseTemplates"],
         "summary": "Get a single exercise template by id.",
         "parameters": [
           {
@@ -720,9 +696,7 @@
     "/v1/routine_folders": {
       "get": {
         "summary": "Get a paginated list of routine folders available on the account.",
-        "tags": [
-          "RoutineFolders"
-        ],
+        "tags": ["RoutineFolders"],
         "parameters": [
           {
             "in": "header",
@@ -788,9 +762,7 @@
       },
       "post": {
         "summary": "Create a new routine folder. The folder will be created at index 0, and all other folders will have their indexes incremented.",
-        "tags": [
-          "RoutineFolders"
-        ],
+        "tags": ["RoutineFolders"],
         "parameters": [
           {
             "in": "header",
@@ -844,9 +816,7 @@
     },
     "/v1/routine_folders/{folderId}": {
       "get": {
-        "tags": [
-          "RoutineFolders"
-        ],
+        "tags": ["RoutineFolders"],
         "summary": "Get a single routine folder by id.",
         "parameters": [
           {
@@ -886,9 +856,7 @@
       "post": {
         "summary": "Create a new webhook subscription.",
         "description": "This endpoint allows you to create a webhook subscription that will notify your application when a workout is created.\n\n Your endpoint must respond with a `200 OK` status within **5 seconds**, otherwise the delivery will be retried.\n\nWhen a new workout is created, we will send a POST request to your provided URL with the following JSON payload:\n```json {\n  \"id\": \"00000000-0000-0000-0000-000000000001\",\n  \"payload\": {\n    \"workoutId\": \"f1085cdb-32b2-4003-967d-53a3af8eaecb\"\n  }\n}\n",
-        "tags": [
-          "Webhook"
-        ],
+        "tags": ["Webhook"],
         "parameters": [
           {
             "in": "header",
@@ -934,9 +902,7 @@
       },
       "delete": {
         "summary": "Delete a webhook subscription.",
-        "tags": [
-          "Webhook"
-        ],
+        "tags": ["Webhook"],
         "parameters": [
           {
             "in": "header",
@@ -957,9 +923,7 @@
       },
       "get": {
         "summary": "Get the current webhook subscription.",
-        "tags": [
-          "Webhook"
-        ],
+        "tags": ["Webhook"],
         "parameters": [
           {
             "in": "header",
@@ -1010,12 +974,7 @@
           "type": {
             "type": "string",
             "description": "The type of the set.",
-            "enum": [
-              "warmup",
-              "normal",
-              "failure",
-              "dropset"
-            ],
+            "enum": ["warmup", "normal", "failure", "dropset"],
             "example": "normal"
           },
           "weight_kg": {
@@ -1052,16 +1011,7 @@
             "type": "number",
             "nullable": true,
             "description": "The Rating of Perceived Exertion (RPE).",
-            "enum": [
-              6,
-              7,
-              7.5,
-              8,
-              8.5,
-              9,
-              9.5,
-              10
-            ],
+            "enum": [6, 7, 7.5, 8, 8.5, 9, 9.5, 10],
             "example": null
           }
         }
@@ -1142,12 +1092,7 @@
           "type": {
             "type": "string",
             "description": "The type of the set.",
-            "enum": [
-              "warmup",
-              "normal",
-              "failure",
-              "dropset"
-            ],
+            "enum": ["warmup", "normal", "failure", "dropset"],
             "example": "normal"
           },
           "weight_kg": {
@@ -1273,12 +1218,7 @@
           "type": {
             "type": "string",
             "description": "The type of the set.",
-            "enum": [
-              "warmup",
-              "normal",
-              "failure",
-              "dropset"
-            ],
+            "enum": ["warmup", "normal", "failure", "dropset"],
             "example": "normal"
           },
           "weight_kg": {
@@ -1763,10 +1703,7 @@
       },
       "UpdatedWorkout": {
         "type": "object",
-        "required": [
-          "type",
-          "workout"
-        ],
+        "required": ["type", "workout"],
         "properties": {
           "type": {
             "type": "string",
@@ -1780,10 +1717,7 @@
       },
       "DeletedWorkout": {
         "type": "object",
-        "required": [
-          "type",
-          "id"
-        ],
+        "required": ["type", "id"],
         "properties": {
           "type": {
             "type": "string",
@@ -1804,11 +1738,7 @@
       },
       "PaginatedWorkoutEvents": {
         "type": "object",
-        "required": [
-          "page",
-          "page_count",
-          "events"
-        ],
+        "required": ["page", "page_count", "events"],
         "properties": {
           "page": {
             "type": "integer",
