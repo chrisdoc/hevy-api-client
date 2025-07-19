@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>0.1.1 (2025-07-19)</small>
+
+* fix(ci): Potential fix for code scanning alert no. 1: Workflow does not contain permissions ([48fa106](https://github.com/chrisdoc/hevy-api-client/commit/48fa106))
+
 ## 0.1.0 (2025-07-19)
 
 * feat: setup Dependabot ([0904540](https://github.com/chrisdoc/hevy-api-client/commit/0904540))
