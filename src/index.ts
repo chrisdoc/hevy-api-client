@@ -7,12 +7,13 @@ import { createClient as createHevyClient, type ClientOptions as HevyClientOptio
 export class HevyAPIClient {
     public client: ReturnType<typeof createHevyClient>;
 
-    constructor(apiKey: string, options: HevyClientOptions = {}) {
+    constructor(apiKey: string, options: HevyClientOptions & { headers?: Record<string, string> } = {}) {
+        const { headers: additionalHeaders, ...restOptions } = options;
         this.client = createHevyClient({
             baseUrl: 'https://api.hevyapp.com',
-            ...options,
+            ...restOptions,
             headers: {
-                ...options.headers,
+                ...additionalHeaders,
                 'api-key': apiKey,
             },
         });
