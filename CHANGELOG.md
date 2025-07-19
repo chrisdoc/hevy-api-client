@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>0.1.4 (2025-07-19)</small>
+
+* chore: remove old client and core files ([0b5d2e4](https://github.com/chrisdoc/hevy-api-client/commit/0b5d2e4))
+
 ## <small>0.1.3 (2025-07-19)</small>
 
 * chore: update various project files after Biome setup and dependency updates ([4a017f8](https://github.com/chrisdoc/hevy-api-client/commit/4a017f8))
