@@ -30,3 +30,4 @@ This project is a TypeScript HTTP client SDK for the Hevy API, generated from it
 - When generating the client, ensure the `--output src/generated` flag is used.
 - Remember to update import paths in `src/index.ts` if the generated code's location changes.
 - The `ClientOptions` type from `@hey-api/openapi-ts` does not directly expose a `headers` property; headers are passed directly to `createClient`.
+- Always ensure all work is committed to the repository.
