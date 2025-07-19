@@ -14,8 +14,7 @@
     "fetch-spec": "node scripts/extract-hevy-openapi.js",
     "generate-client": "openapi-ts --input docs/hevy-openapi-spec.json --output src/generated",
     "prepare": "husky",
-    "release": "release-it",
-    "set-date-version": "node scripts/set-date-version.js"
+    "release": "release-it"
   },
   "author": "Christoph Kieslich",
   "dependencies": {

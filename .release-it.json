@@ -4,7 +4,7 @@
     "tagName": "v${version}"
   },
   "hooks": {
-    "before:init": ["npm run build", "npm run set-date-version"]
+    "before:init": ["npm run build"]
   },
   "npm": {
     "publish": true
@@ -29,9 +29,5 @@
       },
       "infile": "CHANGELOG.md"
     }
-  },
-  "increment": false,
-  "src": {
-    "version": "package.json"
   }
 }
