@@ -14,20 +14,22 @@
     "fetch-spec": "node scripts/extract-hevy-openapi.js",
     "generate-client": "openapi-ts --input docs/hevy-openapi-spec.json --output src/generated",
     "prepare": "husky",
-    "release": "release-it"
+    "release": "release-it",
+    "lint": "biome lint .",
+    "format": "biome format --write ."
   },
   "author": "Christoph Kieslich",
-  "dependencies": {},
   "engines": {
     "node": ">=20.10.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.1.2",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@hey-api/openapi-ts": "^0.78.3",
+    "@release-it/conventional-changelog": "^10.0.1",
     "husky": "^9.1.7",
     "release-it": "^19.0.4",
-    "@release-it/conventional-changelog": "^10.0.1",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   }
