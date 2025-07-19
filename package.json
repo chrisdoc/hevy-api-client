@@ -13,7 +13,8 @@
     "build": "tsup",
     "fetch-spec": "node scripts/extract-hevy-openapi.js",
     "generate-client": "openapi-ts --input docs/hevy-openapi-spec.json --output src/generated",
-    "prepare": "husky"
+    "prepare": "husky",
+    "release": "release-it"
   },
   "author": "Christoph Kieslich",
   "dependencies": {
@@ -27,6 +28,7 @@
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@hey-api/openapi-ts": "^0.78.3",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "release-it": "^19.0.4"
   }
 }
