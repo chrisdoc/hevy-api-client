@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>0.1.5 (2025-07-20)</small>
+
+* chore(license): add MIT license ([3d71af6](https://github.com/chrisdoc/hevy-api-client/commit/3d71af6))
+
 ## <small>0.1.4 (2025-07-19)</small>
 
 * chore: remove old client and core files ([0b5d2e4](https://github.com/chrisdoc/hevy-api-client/commit/0b5d2e4))
