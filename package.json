@@ -2,6 +2,15 @@
   "name": "hevy-api-client",
   "version": "0.1.5",
   "description": "A typescript api client for Hevy Fitness App api",
+  "repository": "github:chrisdoc/hevy-api-client",
+  "license": "MIT",
+  "keywords": [
+    "hevy",
+    "api",
+    "client",
+    "typescript",
+    "openapi"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
