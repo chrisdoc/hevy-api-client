@@ -1,5 +1,9 @@
 # Changelog
 
+## <small>0.1.6 (2025-07-21)</small>
+
+* chore: ✏️ update package.json with repository and license details ([a7b6110](https://github.com/chrisdoc/hevy-api-client/commit/a7b6110))
+
 ## <small>0.1.5 (2025-07-20)</small>
 
 * chore(license): add MIT license ([3d71af6](https://github.com/chrisdoc/hevy-api-client/commit/3d71af6))

@@ -1,6 +1,6 @@
 {
   "name": "hevy-api-client",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A typescript api client for Hevy Fitness App api",
   "repository": "github:chrisdoc/hevy-api-client",
   "license": "MIT",
