@@ -34,7 +34,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.1.2",
     "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/config-conventional": "^20.0.0",
     "@hey-api/openapi-ts": "^0.78.3",
     "@release-it/conventional-changelog": "^10.0.1",
     "husky": "^9.1.7",
