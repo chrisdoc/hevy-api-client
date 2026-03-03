@@ -1,0 +1,73 @@
+{
+  "name": "hevy-api-client",
+  "version": "0.1.0",
+  "description": "TypeScript/JavaScript client for the Hevy API",
+  "keywords": [
+    "api",
+    "fitness",
+    "hevy",
+    "workout"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "fetch-spec": "node scripts/openapi-spec.js",
+    "generate": "openapi-ts",
+    "prepare-client": "pnpm run fetch-spec && pnpm run generate",
+    "build": "pnpm run prepare-client && tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:integration": "vitest run test/integration",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "typecheck": "tsgo --noEmit",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@hey-api/client-axios": "^0.9.1",
+    "axios": "^1.13.6",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@hey-api/openapi-ts": "0.93.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^25.3.3",
+    "@typescript/native-preview": "7.0.0-dev.20260303.1",
+    "abstract-syntax-tree": "^2.22.0",
+    "dotenv": "^17.3.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.3.2",
+    "oxfmt": "^0.36.0",
+    "oxlint": "^1.51.0",
+    "semantic-release": "^25.0.3",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "lint-staged": {
+    "*": "oxfmt --no-error-on-unmatched-pattern"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
