@@ -34,7 +34,17 @@ await getV1Workouts({ headers: { "api-key": "YOUR_KEY" } });
 
 ### Custom client instance
 
-Use `createClient` for isolated instances:
+Use `createClient` with `createHevyConfig` for isolated instances (baseURL defaults to `https://api.hevyapp.com`):
+
+```ts
+import { createClient, createHevyConfig, getV1Workouts } from "hevy-api-client";
+
+const client = createClient(createHevyConfig({ apiKey: "YOUR_KEY" }));
+
+await getV1Workouts({ client });
+```
+
+Or use `createConfig` with explicit baseURL:
 
 ```ts
 import { createClient, createConfig, getV1Workouts } from "hevy-api-client";
@@ -45,8 +55,6 @@ const client = createClient(
     headers: { "api-key": "YOUR_KEY" },
   }),
 );
-
-await getV1Workouts({ client });
 ```
 
 ### Axios interceptors
@@ -63,30 +71,6 @@ client.instance.interceptors.request.use((config) => {
 ```
 
 ## Development
-
-### Getting started
-
-The recommended setup is to install Oxlint and Oxfmt as dev dependencies and add scripts:
-
-```bash
-pnpm add -D oxlint oxfmt
-```
-
-Add scripts to `package.json`:
-
-```json
-{
-  "scripts": {
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
-    "format": "oxfmt",
-    "format:check": "oxfmt --check",
-    "typecheck": "tsgo --noEmit"
-  }
-}
-```
-
-### Commands
 
 ```bash
 pnpm install
@@ -112,6 +96,12 @@ pnpm run test         # Integration tests run when API_KEY is set
 pnpm run test:integration  # Run only integration tests
 ```
 
+To run integration tests in CI, set the API key as a GitHub secret:
+
+```bash
+pnpm run secret:set    # Reads API_KEY from .env, sets via gh secret set API_KEY
+```
+
 ### Releases
 
 Releases are automated with [semantic-release](https://github.com/semantic-release/semantic-release). Push to `main` or `master` to trigger a release. Version and changelog are derived from [Conventional Commits](https://www.conventionalcommits.org/):
@@ -123,6 +113,7 @@ Releases are automated with [semantic-release](https://github.com/semantic-relea
 **Required secrets** (GitHub repo Settings → Secrets):
 
 - `NPM_TOKEN` – npm access token for publishing (create at [npmjs.com/settings/tokens](https://www.npmjs.com/settings/tokens))
+- `API_KEY` – Hevy API key for integration tests in CI (optional; run `pnpm run secret:set` to set from `.env`)
 
 ## License
 
