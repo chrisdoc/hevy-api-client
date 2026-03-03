@@ -41,7 +41,8 @@
     "format": "oxfmt",
     "format:check": "oxfmt --check",
     "typecheck": "tsgo --noEmit",
-    "prepare": "husky"
+    "prepare": "husky",
+    "secret:set": "bash scripts/set-github-secret.sh"
   },
   "dependencies": {
     "@hey-api/client-axios": "^0.9.1",
