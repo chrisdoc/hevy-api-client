@@ -114,7 +114,7 @@ Releases are automated with [semantic-release](https://github.com/semantic-relea
 
 - `API_KEY` – Hevy API key for integration tests in CI (optional; run `pnpm run secret:set` to set from `.env`)
 
-**npm publishing** uses [OIDC trusted publishing](https://docs.npmjs.com/trusted-publishers) (no token). Configure once on [npmjs.com](https://www.npmjs.com/) → package → Settings → Trusted Publisher: add GitHub Actions, workflow `release.yml`, and your repo.
+**npm publishing** uses [OIDC trusted publishing](https://docs.npmjs.com/trusted-publishers) (no token). Configure on [npmjs.com](https://www.npmjs.com/) → package → Settings → Trusted Publisher: add GitHub Actions, workflow `release.yml`, and your repo.
 
 ## License
 
