@@ -20,11 +20,16 @@
 
 export { client, type CreateClientConfig } from "./client/client.gen.js";
 export { createClient, createConfig } from "./client/client/index.js";
+
+/** Default Hevy API base URL. */
+export const HEVY_API_BASE_URL = "https://api.hevyapp.com";
+
 export * from "./client/sdk.gen.js";
 export * from "./client/types.gen.js";
 export * from "./client/zod.gen.js";
 
 import { client } from "./client/client.gen.js";
+import { createConfig } from "./client/client/index.js";
 
 /**
  * Configuration options for the Hevy API client.
@@ -44,9 +49,30 @@ export interface HevyClientConfig {
  */
 export function configureClient(config: HevyClientConfig): void {
   client.setConfig({
-    baseURL: config.baseUrl ?? "https://api.hevyapp.com",
+    baseURL: config.baseUrl ?? HEVY_API_BASE_URL,
     headers: {
       "api-key": config.apiKey,
     },
+  });
+}
+
+/**
+ * Create a config for a custom Hevy API client with default baseURL.
+ * Use with createClient for isolated instances.
+ *
+ * @example
+ * ```ts
+ * const client = createClient(
+ *   createHevyConfig({ apiKey: "YOUR_KEY" })
+ * );
+ * ```
+ */
+export function createHevyConfig(config: {
+  apiKey: string;
+  baseUrl?: string;
+}): ReturnType<typeof createConfig> {
+  return createConfig({
+    baseURL: config.baseUrl ?? HEVY_API_BASE_URL,
+    headers: { "api-key": config.apiKey },
   });
 }

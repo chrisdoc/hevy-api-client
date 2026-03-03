@@ -6,7 +6,9 @@ describe("imports", () => {
     expect(mod.client).toBeDefined();
     expect(mod.createClient).toBeDefined();
     expect(mod.createConfig).toBeDefined();
+    expect(mod.createHevyConfig).toBeDefined();
     expect(mod.configureClient).toBeDefined();
+    expect(mod.HEVY_API_BASE_URL).toBe("https://api.hevyapp.com");
   });
 
   it("can import SDK functions", async () => {
