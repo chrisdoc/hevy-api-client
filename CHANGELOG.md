@@ -1,3 +1,9 @@
+## [1.0.1](https://github.com/chrisdoc/hevy-api-client/compare/v1.0.0...v1.0.1) (2026-03-03)
+
+### Bug Fixes
+
+- add repository.url for npm provenance ([c90871e](https://github.com/chrisdoc/hevy-api-client/commit/c90871ed355ec2b7900b4d58e90cf37c02e94ce1))
+
 # 1.0.0 (2026-03-03)
 
 ### Features
