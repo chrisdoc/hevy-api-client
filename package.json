@@ -9,6 +9,10 @@
     "workout"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisdoc/hevy-api-client"
+  },
   "files": [
     "dist"
   ],
