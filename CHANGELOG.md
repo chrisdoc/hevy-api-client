@@ -1,4 +1,4 @@
-## [1.0.2](https://github.com/chrisdoc/hevy-api-client/compare/v1.0.1...v1.0.2) (2026-03-04)
+## [1.0.3](https://github.com/chrisdoc/hevy-api-client/compare/v1.0.2...v1.0.3) (2026-03-04)
 
 ### Bug Fixes
 
