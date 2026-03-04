@@ -1,6 +1,6 @@
 {
   "name": "hevy-api-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "TypeScript/JavaScript client for the Hevy API",
   "keywords": [
     "api",

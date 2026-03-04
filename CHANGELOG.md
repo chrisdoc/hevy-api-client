@@ -1,3 +1,9 @@
+## [1.0.2](https://github.com/chrisdoc/hevy-api-client/compare/v1.0.1...v1.0.2) (2026-03-04)
+
+### Bug Fixes
+
+- ensure npm publish via OIDC (Node 24, repository.url)
+
 ## [1.0.1](https://github.com/chrisdoc/hevy-api-client/compare/v1.0.0...v1.0.1) (2026-03-03)
 
 ### Bug Fixes
