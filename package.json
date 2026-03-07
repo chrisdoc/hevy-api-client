@@ -54,11 +54,11 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@hey-api/openapi-ts": "0.93.1",
+    "@hey-api/openapi-ts": "0.94.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/node": "^25.3.3",
-    "@typescript/native-preview": "7.0.0-dev.20260303.1",
+    "@typescript/native-preview": "7.0.0-dev.20260307.1",
     "abstract-syntax-tree": "^2.22.0",
     "dotenv": "^17.3.1",
     "husky": "^9.1.7",
